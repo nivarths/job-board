@@ -11,7 +11,7 @@ const JobListings = ({isHome = false}) => {
 
     useEffect(() => {
         const fetchJobs = async() => {
-            const apiURL = isHome ? '/api/jobs?_limit=3' : '/api/jobs'
+            const apiURL = isHome ? 'https://job-board-api-sb6c.onrender.com/jobs?_limit=3' : 'https://job-board-api-sb6c.onrender.com/jobs'
             try {
                 const res = await fetch(apiURL)
                 const data = await res.json()
